@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { auth, facebookProvider, googleProvider, signInWithPopup } from '../../../utils/firebase';
+import Image from 'next/image';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('emilys');
@@ -81,8 +82,17 @@ export default function LoginPage() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 ">
             <div className='w-11/12 py-10 flex items-center justify-between'>
-                <div className='w-[40%] md:flex hidden h-[540px] border-4 border-black'>
-                    <img src="/assets/illustration.png" alt="" />
+                {/* <div className='w-[40%] md:flex hidden h-[540px]'>
+                    <img src="/assets/illustration.png" alt="image" />
+                </div> */}
+                <div className='w-[40%] md:flex hidden h-[540px] relative'>
+                    <Image
+                        src='/assets/illustration.png'
+                        alt="image"
+                        layout="fill"
+                        objectFit="contain"
+                        priority
+                    />
                 </div>
                 <div className="flex w-full md:w-[45%] bg-white p-8 rounded-lg shadow-lg">
                     <div className="flex-1">
