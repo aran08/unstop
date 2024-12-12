@@ -81,7 +81,7 @@ export default function LoginPage() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 ">
             <div className='w-11/12 py-10 flex items-center justify-between'>
-                <div className='w-[40%] md:flex hidden h-[540px]'>
+                <div className='w-[40%] md:flex hidden h-[540px] border-4 border-black'>
                     <img src="/assets/illustration.png" alt="" />
                 </div>
                 <div className="flex w-full md:w-[45%] bg-white p-8 rounded-lg shadow-lg">
